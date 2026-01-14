@@ -1,0 +1,1291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toolify - Free Online Tools for PDF, Images, SEO & More</title>
+    <meta name="description" content="Toolify offers free online tools for PDF editing, image processing, SEO optimization, and more. Simplify your workflow with our user-friendly tools.">
+    <meta name="keywords" content="PDF tools, image resize, SEO tools, online converter, free tools, free productivity tools, pdf compress, pdf to excel, image resize, image, resize, ilovepdf, i love pdf, top ranking website, top website">
+    <meta name="author" content="Toolify">
+    <link rel="shortcut icon" href="images/image-removebg-preview.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* CSS Variables for consistent theming */
+        :root {
+            --primary-color: #4361ee;
+            --secondary-color: #3f37c9;
+            --accent-color: #4cc9f0;
+            --dark-color: #1a1a2e;
+            --light-color: #f8f9fa;
+            --gray-color: #6c757d;
+            --success-color: #4bb543;
+            --gradient-bg: linear-gradient(135deg, #4361ee, #3f37c9, #4cc9f0);
+            --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f5f7ff;
+            color: #333;
+            line-height: 1.6;
+            padding-top: 80px; /* Added padding for fixed header */
+        }
+
+        /* Top Navigation */
+        .top-nav {
+            background: white;
+            box-shadow: var(--shadow);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            height: 80px;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo h1 {
+            font-size: 28px;
+            background: var(--gradient-bg);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-weight: 800;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nav-menu ul {
+            display: flex;
+            list-style: none;
+            gap: 5px;
+        }
+
+        .nav-menu li {
+            position: relative;
+        }
+
+        .nav-menu a {
+            display: flex;
+            align-items: center;
+            padding: 15px 20px;
+            color: #333;
+            text-decoration: none;
+            transition: var(--transition);
+            border-radius: 5px;
+            font-weight: 500;
+        }
+
+        .nav-menu a:hover, .nav-menu a.active {
+            background: rgba(67, 97, 238, 0.1);
+            color: var(--primary-color);
+        }
+
+        .nav-menu i {
+            margin-right: 8px;
+            width: 18px;
+            text-align: center;
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            min-width: 220px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            border-radius: 10px;
+            overflow: hidden;
+            z-index: 1001;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            padding: 12px 20px;
+            font-size: 0.95rem;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            color: #333;
+            display: flex;
+            align-items: center;
+        }
+
+        .dropdown-content a:last-child {
+            border-bottom: none;
+        }
+
+        .dropdown-content a:hover {
+            background: rgba(67, 97, 238, 0.08);
+            color: var(--primary-color);
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-left: 20px;
+        }
+
+        .search-container {
+            position: relative;
+        }
+
+        .search-box {
+            padding: 10px 20px;
+            padding-right: 50px;
+            border: 2px solid #e0e0e0;
+            border-radius: 50px;
+            font-size: 14px;
+            width: 250px;
+            transition: var(--transition);
+        }
+
+        .search-box:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            width: 300px;
+        }
+
+        .search-button {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: var(--gray-color);
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .theme-toggle {
+            background: none;
+            border: none;
+            font-size: 20px;
+            color: var(--gray-color);
+            cursor: pointer;
+            transition: var(--transition);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .theme-toggle:hover {
+            color: var(--primary-color);
+            background: rgba(67, 97, 238, 0.1);
+        }
+
+        /* Mobile Menu Toggle */
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: var(--dark-color);
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        /* Main Content Area */
+        .main-content {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header - Removed since nav is now at top */
+        .header {
+            display: none;
+        }
+
+        /* Content Sections */
+        .content-section {
+            padding: 40px 30px;
+            flex: 1;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 60px 20px;
+            background: var(--gradient-bg);
+            border-radius: 0 0 30px 30px;
+            color: white;
+            margin-bottom: 40px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            background: linear-gradient(to right, #fff, #f0f0f0, #e0e0e0);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            opacity: 0.9;
+        }
+
+        .hero-input {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .hero-input input {
+            width: 100%;
+            padding: 18px 25px;
+            border: none;
+            border-radius: 50px;
+            font-size: 18px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero-input button {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--dark-color);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .hero-input button:hover {
+            background: #000;
+        }
+
+        /* Tools Grid */
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            color: var(--dark-color);
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 70px;
+            height: 4px;
+            background: var(--gradient-bg);
+            border-radius: 2px;
+        }
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .tool-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            cursor: pointer;
+            position: relative;
+            padding: 25px;
+            height: 100%;
+        }
+
+        .tool-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .tool-card:hover .tool-icon {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .tool-icon {
+            width: 70px;
+            height: 70px;
+            background: rgba(67, 97, 238, 0.1);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            transition: var(--transition);
+        }
+
+        .tool-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: var(--dark-color);
+        }
+
+        .tool-card p {
+            color: var(--gray-color);
+            margin-bottom: 15px;
+        }
+
+        .tool-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 15px;
+        }
+
+        .tool-tag {
+            background: rgba(67, 97, 238, 0.1);
+            color: var(--primary-color);
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        /* Features Section */
+        .features {
+            background: white;
+            padding: 60px 30px;
+            border-radius: 30px;
+            margin-bottom: 60px;
+            box-shadow: var(--shadow);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .feature-card {
+            text-align: center;
+            padding: 30px 20px;
+            border-radius: 15px;
+            background: #f8f9ff;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .feature-card:hover {
+            background: var(--gradient-bg);
+            color: white;
+            transform: translateY(-5px);
+        }
+
+        .feature-card:hover .feature-icon,
+        .feature-card:hover h4,
+        .feature-card:hover p {
+            color: white;
+        }
+
+        .feature-icon {
+            font-size: 40px;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+            transition: var(--transition);
+        }
+
+        .feature-card h4 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--dark-color);
+            transition: var(--transition);
+        }
+
+        .feature-card p {
+            color: var(--gray-color);
+            transition: var(--transition);
+        }
+
+        /* Blog Content */
+        .blog-content {
+            background: white;
+            padding: 50px;
+            border-radius: 30px;
+            margin-bottom: 60px;
+            box-shadow: var(--shadow);
+            line-height: 1.8;
+        }
+
+        .blog-content h2 {
+            color: var(--dark-color);
+            margin: 30px 0 15px;
+            font-size: 1.8rem;
+        }
+
+        .blog-content h3 {
+            color: var(--dark-color);
+            margin: 25px 0 10px;
+            font-size: 1.5rem;
+        }
+
+        .blog-content p {
+            margin-bottom: 15px;
+        }
+
+        .blog-content ul, .blog-content ol {
+            margin: 15px 0 15px 30px;
+        }
+
+        .blog-content li {
+            margin-bottom: 8px;
+        }
+
+        .blog-content blockquote {
+            border-left: 4px solid var(--primary-color);
+            padding-left: 20px;
+            margin: 20px 0;
+            font-style: italic;
+            color: var(--gray-color);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--dark-color);
+            color: white;
+            padding: 60px 30px 30px;
+            margin-top: auto;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h3 {
+            font-size: 1.5rem;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-section h3:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--accent-color);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: #ddd;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-color);
+            padding-left: 5px;
+        }
+
+        .newsletter-form {
+            display: flex;
+            margin-top: 20px;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 12px 15px;
+            border: none;
+            border-radius: 5px 0 0 5px;
+        }
+
+        .newsletter-form button {
+            background: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .newsletter-form button:hover {
+            background: #3aa8d0;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .social-icons a:hover {
+            background: var(--accent-color);
+            transform: translateY(-3px);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .nav-menu ul {
+                gap: 2px;
+            }
+            
+            .nav-menu a {
+                padding: 15px 15px;
+                font-size: 14px;
+            }
+            
+            .search-box {
+                width: 200px;
+            }
+            
+            .search-box:focus {
+                width: 250px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .mobile-menu-toggle {
+                display: block;
+            }
+            
+            .nav-menu {
+                position: fixed;
+                top: 80px;
+                left: 0;
+                right: 0;
+                background: white;
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+                transform: translateY(-100%);
+                opacity: 0;
+                visibility: hidden;
+                transition: var(--transition);
+                z-index: 999;
+                height: auto;
+                max-height: calc(100vh - 80px);
+                overflow-y: auto;
+            }
+            
+            .nav-menu.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+            
+            .nav-menu ul {
+                flex-direction: column;
+                width: 100%;
+                gap: 5px;
+            }
+            
+            .nav-menu li {
+                width: 100%;
+            }
+            
+            .nav-menu a {
+                padding: 15px;
+                width: 100%;
+                border-radius: 5px;
+                justify-content: flex-start;
+                font-size: 16px;
+            }
+            
+            .dropdown-content {
+                position: static;
+                box-shadow: none;
+                border-radius: 0;
+                background: rgba(0, 0, 0, 0.02);
+                width: 100%;
+                margin-top: 5px;
+                display: none;
+            }
+            
+            .dropdown.active .dropdown-content {
+                display: block;
+            }
+            
+            .dropdown-content a {
+                padding-left: 40px;
+            }
+            
+            .nav-actions {
+                margin-left: 0;
+                margin-top: 15px;
+                width: 100%;
+            }
+            
+            .search-container {
+                width: 100%;
+            }
+            
+            .search-box {
+                width: 100%;
+            }
+            
+            .search-box:focus {
+                width: 100%;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .content-section {
+                padding: 30px 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding-top: 70px;
+            }
+            
+            .top-nav {
+                height: 70px;
+            }
+            
+            .nav-menu {
+                top: 70px;
+                max-height: calc(100vh - 70px);
+            }
+            
+            .hero {
+                padding: 40px 20px;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .tools-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                gap: 20px;
+            }
+            
+            .blog-content {
+                padding: 30px 20px;
+            }
+            
+            .features {
+                padding: 40px 20px;
+            }
+            
+            .section-title {
+                font-size: 1.7rem;
+            }
+            
+            .logo h1 {
+                font-size: 24px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero {
+                padding: 30px 15px;
+            }
+            
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .tools-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav-container {
+                padding: 0 15px;
+            }
+            
+            .hero-input input {
+                padding: 15px 20px;
+                font-size: 16px;
+            }
+            
+            .hero-input button {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+            
+            .logo h1 {
+                font-size: 22px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .hero h1 {
+                font-size: 1.6rem;
+            }
+            
+            .tool-card {
+                padding: 20px;
+            }
+            
+            .tool-icon {
+                width: 60px;
+                height: 60px;
+                font-size: 24px;
+            }
+            
+            .logo h1 {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Navigation -->
+    <nav class="top-nav">
+        <div class="nav-container">
+            <div class="logo">
+                <h1><i class="fas fa-tools"></i> Tool<span>ify</span></h1>
+            </div>
+            
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <div class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a href="#" class="active"><i class="fas fa-home"></i> Home</a></li>
+                    <li class="dropdown" id="pdfDropdown">
+                        <a href="#"><i class="fas fa-file-pdf"></i> PDF Tools <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-content">
+                            <a href="#"><i class="fas fa-compress-alt"></i> Compress PDF</a>
+                            <a href="#"><i class="fas fa-lock"></i> Protect PDF</a>
+                            <a href="#"><i class="fas fa-unlock"></i> Unlock PDF</a>
+                            <a href="#"><i class="fas fa-exchange-alt"></i> Convert PDF</a>
+                        </div>
+                    </li>
+                    <li class="dropdown" id="seoDropdown">
+                        <a href="#"><i class="fas fa-search"></i> SEO Tools <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-content">
+                            <a href="#"><i class="fas fa-chart-line"></i> Keyword Research</a>
+                            <a href="#"><i class="fas fa-check-circle"></i> SEO Audit</a>
+                            <a href="#"><i class="fas fa-link"></i> Backlink Checker</a>
+                            <a href="#"><i class="fas fa-file-alt"></i> Content Optimizer</a>
+                        </div>
+                    </li>
+                </ul>
+                <div class="nav-actions">
+                    <div class="search-container">
+                        <input type="text" class="search-box" placeholder="Search tools...">
+                        <button class="search-button">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                    <!-- <button class="theme-toggle" id="themeToggle">
+                        <i class="fas fa-moon"></i>
+                    </button> -->
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>Transform Your Workflow With Powerful Online Tools</h1>
+            <p>Free, fast, and user-friendly tools for PDF editing, image processing, SEO optimization, and more. No registration required.</p>
+            <div class="hero-input">
+                <input type="text" placeholder="What tool do you need today?" id="heroSearch">
+                <button><i class="fas fa-search"></i> Search Tools</button>
+            </div>
+        </section>
+
+        <!-- Popular Tools Section -->
+        <section class="content-section">
+            <h2 class="section-title">Most Popular Tools</h2>
+            <div class="tools-grid" id="toolsGrid">
+                <!-- Tools will be populated by JavaScript -->
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features">
+            <h2 class="section-title">Why Choose Toolify?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-bolt feature-icon"></i>
+                    <h4>Lightning Fast</h4>
+                    <p>Process files in seconds with our optimized algorithms and cloud infrastructure.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-shield-alt feature-icon"></i>
+                    <h4>Secure & Private</h4>
+                    <p>Your files are never stored on our servers. All processing happens securely in your browser.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-tags feature-icon"></i>
+                    <h4>Completely Free</h4>
+                    <p>No hidden charges, watermarks, or limitations. All tools are 100% free to use.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-laptop feature-icon"></i>
+                    <h4>No Installation</h4>
+                    <p>Use all tools directly in your browser. No software downloads or installations needed.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Content Section (SEO Optimized) -->
+        <section class="content-section">
+            <div class="blog-content">
+                <h2>Toolify: The Ultimate Online Toolkit for Modern Professionals</h2>
+                <p>In today's fast-paced digital world, efficiency is the key to success. Whether you're a student, professional, entrepreneur, or content creator, having access to the right tools can significantly streamline your workflow. That's where Toolify comes in - a comprehensive platform offering a wide range of free online tools designed to simplify your daily tasks and boost productivity.</p>
+                
+                <h3>Why Toolify Stands Out in the Crowded Online Tools Market</h3>
+                <p>With countless online tools available, Toolify distinguishes itself through its user-centric approach, cutting-edge technology, and commitment to accessibility. Our platform brings together essential utilities for document processing, image editing, SEO optimization, and more - all in one convenient location.</p>
+                
+                <h3>Comprehensive PDF Toolkit</h3>
+                <p>PDF documents have become the standard for sharing professional documents while preserving formatting. Toolify's PDF toolkit includes everything you need to work with PDF files efficiently:</p>
+                <ul>
+                    <li><strong>PDF Compression:</strong> Reduce file sizes without compromising quality for easy sharing and storage</li>
+                    <li><strong>Merge & Split:</strong> Combine multiple PDFs or extract specific pages from documents</li>
+                    <li><strong>Conversion Tools:</strong> Convert PDFs to Word, Excel, PowerPoint, and image formats with high accuracy</li>
+                    <li><strong>Security Features:</strong> Add passwords, watermarks, and permissions to protect sensitive documents</li>
+                </ul>
+                
+                <h3>Advanced Image Processing Capabilities</h3>
+                <p>In the visual-centric digital landscape, image optimization is crucial. Toolify offers a robust suite of image tools:</p>
+                <ul>
+                    <li><strong>Smart Resizing:</strong> Resize images to specific dimensions while maintaining aspect ratios</li>
+                    <li><strong>Format Conversion:</strong> Convert between JPG, PNG, GIF, WebP, and other popular formats</li>
+                    <li><strong>Compression:</strong> Reduce image file sizes for faster web loading without visible quality loss</li>
+                    <li><strong>Editing Tools:</strong> Basic editing functions like cropping, rotating, and applying filters</li>
+                </ul>
+                
+                <h3>SEO Optimization Suite</h3>
+                <p>For digital marketers, content creators, and website owners, Toolify's SEO tools provide valuable insights and optimization capabilities:</p>
+                <ul>
+                    <li><strong>Keyword Research:</strong> Identify high-value keywords with search volume and competition data</li>
+                    <li><strong>Website Audit:</strong> Analyze technical SEO factors affecting your site's performance</li>
+                    <li><strong>Backlink Analysis:</strong> Monitor your backlink profile and identify linking opportunities</li>
+                    <li><strong>Content Optimization:</strong> Get suggestions for improving content readability and SEO score</li>
+                </ul>
+                
+                <h3>Security and Privacy First Approach</h3>
+                <p>At Toolify, we understand that your documents and data are sensitive. That's why we've implemented a strict privacy policy:</p>
+                <blockquote>
+                    "All file processing occurs locally in your browser whenever possible. For larger files requiring server processing, we automatically delete all uploaded files within 24 hours. We never share your data with third parties, and all connections are encrypted with SSL technology."
+                </blockquote>
+                
+                <h3>Future Developments and Roadmap</h3>
+                <p>Toolify is continuously evolving to meet user needs. Our upcoming features include:</p>
+                <ol>
+                    <li>AI-powered document analysis and summarization</li>
+                    <li>Collaborative editing tools for teams</li>
+                    <li>Browser extensions for one-click access to tools</li>
+                    <li>Mobile applications for iOS and Android</li>
+                    <li>Advanced video editing and compression tools</li>
+                </ol>
+                
+                <h3>Join Our Growing Community</h3>
+                <p>Toolify has already helped over 500,000 users worldwide streamline their workflows. Join our community today and experience the difference a well-designed toolkit can make in your daily tasks. Whether you need to compress a PDF for email, resize images for social media, or optimize your website's SEO, Toolify has you covered with fast, reliable, and completely free tools.</p>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-tools"></i> Toolify</h3>
+                    <p>Your all-in-one solution for online tools. Free, fast, and secure utilities for PDF, images, SEO, and more.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">PDF Tools</a></li>
+                        <li><a href="#">Image Tools</a></li>
+                        <li><a href="#">SEO Tools</a></li>
+                        <li><a href="#">Video Tools</a></li>
+                        <li><a href="#">Developer Tools</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">Disclaimer</a></li>
+                        <li><a href="#">GDPR Compliance</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to get updates on new tools and features.</p>
+                    <form class="newsletter-form" name="Search" id="search">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Toolify. All rights reserved. | Designed with <i class="fas fa-heart" style="color: #ff4757;"></i> for the digital community</p>
+            </div>
+        </footer>
+    </main>
+
+    <script>
+        // Sample tool data
+        const tools = [
+            {
+                id: 1,
+                icon: "fas fa-compress-alt",
+                title: "PDF Compressor",
+                description: "Reduce PDF file size while maintaining quality. Perfect for email attachments and web uploads.",
+                tags: ["PDF", "Compress", "Document"],
+                category: "pdf"
+            },
+            {
+                id: 2,
+                icon: "fas fa-expand-alt",
+                title: "Image Resizer",
+                description: "Resize images to any dimension. Maintain aspect ratio or customize as needed.",
+                tags: ["Image", "Resize", "Photo"],
+                category: "image"
+            },
+            {
+                id: 3,
+                icon: "fas fa-search",
+                title: "SEO Analyzer",
+                description: "Analyze websites for SEO factors and get actionable recommendations.",
+                tags: ["SEO", "Analyzer", "Website"],
+                category: "seo"
+            },
+            {
+                id: 4,
+                icon: "fas fa-file-pdf",
+                title: "PDF to Word",
+                description: "Convert PDF documents to editable Word files with high accuracy.",
+                tags: ["PDF", "Word", "Converter"],
+                category: "pdf"
+            },
+            {
+                id: 5,
+                icon: "fas fa-images",
+                title: "Image Converter",
+                description: "Convert between image formats: JPG, PNG, GIF, WebP, and more.",
+                tags: ["Image", "Converter", "Format"],
+                category: "image"
+            },
+            {
+                id: 6,
+                icon: "fas fa-link",
+                title: "Backlink Checker",
+                description: "Check backlinks for any website and analyze linking domains.",
+                tags: ["SEO", "Backlink", "Checker"],
+                category: "seo"
+            }
+        ];
+
+        // DOM Elements
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const navMenu = document.getElementById('navMenu');
+        const themeToggle = document.getElementById('themeToggle');
+        const heroSearch = document.getElementById('heroSearch');
+        const searchBox = document.querySelector('.search-box');
+        const pdfDropdown = document.getElementById('pdfDropdown');
+        const seoDropdown = document.getElementById('seoDropdown');
+
+        // Populate tools grid
+        function populateToolsGrid() {
+            const toolsGrid = document.getElementById('toolsGrid');
+            toolsGrid.innerHTML = '';
+            
+            tools.forEach(tool => {
+                const toolCard = document.createElement('div');
+                toolCard.className = 'tool-card';
+                toolCard.innerHTML = `
+                    <div class="tool-icon">
+                        <i class="${tool.icon}"></i>
+                    </div>
+                    <h3>${tool.title}</h3>
+                    <p>${tool.description}</p>
+                    <div class="tool-tags">
+                        ${tool.tags.map(tag => `<span class="tool-tag">${tag}</span>`).join('')}
+                    </div>
+                `;
+                toolCard.addEventListener('click', () => {
+                    if (tool.title === 'Image Resizer') {
+                        window.location.href = 'imageresize.html';
+                    } else if (tool.title === 'Image Converter') {
+                        window.location.href = 'convert.html';
+                    } else {
+                        alert(`Opening ${tool.title} tool...`);
+                    }
+                });
+                toolsGrid.appendChild(toolCard);
+            });
+        }
+
+        // Search functionality
+        function setupSearch() {
+            const searchHandler = (e) => {
+                const searchTerm = e.target.value.toLowerCase();
+                const toolCards = document.querySelectorAll('.tool-card');
+                
+                toolCards.forEach(card => {
+                    const title = card.querySelector('h3').textContent.toLowerCase();
+                    const description = card.querySelector('p').textContent.toLowerCase();
+                    const tags = Array.from(card.querySelectorAll('.tool-tag')).map(tag => tag.textContent.toLowerCase());
+                    
+                    const matches = title.includes(searchTerm) || 
+                                   description.includes(searchTerm) || 
+                                   tags.some(tag => tag.includes(searchTerm));
+                    
+                    card.style.display = matches ? 'block' : 'none';
+                });
+            };
+            
+            if (heroSearch) heroSearch.addEventListener('input', searchHandler);
+            if (searchBox) searchBox.addEventListener('input', searchHandler);
+            
+            // Hero search button functionality
+            const heroSearchButton = document.querySelector('.hero-input button');
+            if (heroSearchButton && heroSearch) {
+                heroSearchButton.addEventListener('click', () => {
+                    if (heroSearch.value.trim()) {
+                        heroSearch.dispatchEvent(new Event('input'));
+                        window.scrollTo({
+                            top: document.querySelector('.tools-grid').offsetTop - 100,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+                
+                heroSearch.addEventListener('keypress', (e) => {
+                    if (e.key === 'Enter') {
+                        heroSearchButton.click();
+                    }
+                });
+            }
+        }
+
+        // Theme toggle functionality
+        function setupThemeToggle() {
+            const themeIcon = themeToggle.querySelector('i');
+            
+            themeToggle.addEventListener('click', () => {
+                document.body.classList.toggle('dark-theme');
+                
+                if (document.body.classList.contains('dark-theme')) {
+                    themeIcon.className = 'fas fa-sun';
+                    document.body.style.backgroundColor = '#121212';
+                    document.body.style.color = '#f0f0f0';
+                } else {
+                    themeIcon.className = 'fas fa-moon';
+                    document.body.style.backgroundColor = '';
+                    document.body.style.color = '';
+                }
+            });
+        }
+
+        // Mobile menu toggle functionality
+        function setupMobileMenu() {
+            mobileMenuToggle.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+                
+                // Change menu icon
+                const menuIcon = mobileMenuToggle.querySelector('i');
+                if (navMenu.classList.contains('active')) {
+                    menuIcon.className = 'fas fa-times';
+                } else {
+                    menuIcon.className = 'fas fa-bars';
+                }
+            });
+            
+            // Close menu when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!navMenu.contains(e.target) && 
+                    !mobileMenuToggle.contains(e.target) && 
+                    navMenu.classList.contains('active')) {
+                    navMenu.classList.remove('active');
+                    mobileMenuToggle.querySelector('i').className = 'fas fa-bars';
+                }
+            });
+            
+            // Close menu when clicking on a link
+            const navLinks = navMenu.querySelectorAll('a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (window.innerWidth <= 992) {
+                        navMenu.classList.remove('active');
+                        mobileMenuToggle.querySelector('i').className = 'fas fa-bars';
+                    }
+                });
+            });
+        }
+
+        // Dropdown functionality for mobile
+        function setupDropdowns() {
+            [pdfDropdown, seoDropdown].forEach(dropdown => {
+                if (dropdown) {
+                    const toggle = dropdown.querySelector('a');
+                    toggle.addEventListener('click', (e) => {
+                        if (window.innerWidth <= 992) {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            dropdown.classList.toggle('active');
+                            
+                            // Close other dropdowns
+                            [pdfDropdown, seoDropdown].forEach(other => {
+                                if (other !== dropdown) {
+                                    other.classList.remove('active');
+                                }
+                            });
+                        }
+                    });
+                }
+            });
+            
+            // Close dropdowns when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!e.target.closest('.dropdown') && window.innerWidth <= 992) {
+                    [pdfDropdown, seoDropdown].forEach(dropdown => {
+                        dropdown.classList.remove('active');
+                    });
+                }
+            });
+        }
+
+        // Initialize everything when DOM loads
+        document.addEventListener('DOMContentLoaded', () => {
+            populateToolsGrid();
+            setupSearch();
+            setupThemeToggle();
+            setupMobileMenu();
+            setupDropdowns();
+            
+            // Add active class to current page in nav
+            const navLinks = document.querySelectorAll('.nav-menu a');
+            navLinks.forEach(link => {
+                if (link.href === window.location.href) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Handle window resize
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 992) {
+                navMenu.classList.remove('active');
+                mobileMenuToggle.querySelector('i').className = 'fas fa-bars';
+                
+                // Reset dropdowns
+                [pdfDropdown, seoDropdown].forEach(dropdown => {
+                    dropdown.classList.remove('active');
+                });
+            }
+        });
+    </script>
+</body>
+</html>
