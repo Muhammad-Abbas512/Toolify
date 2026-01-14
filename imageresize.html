@@ -372,32 +372,29 @@
         /* Main Content Row */
         .main-content-row {
             display: flex;
-            gap: 20px;
+            flex-direction: column;
+            gap: 40px;
             margin-bottom: 40px;
         }
 
-        /* Preview Container */
+        /* Preview Container with 3 boxes */
         .preview-container {
             display: grid;
-            grid-template-columns: 5fr;
+            grid-template-columns: repeat(1, 1fr);
             gap: 30px;
+            margin-bottom: 20px;
+            min-width: 0;
         }
 
         @media (min-width: 768px) {
             .preview-container {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: repeat(3, 1fr);
             }
+        }
 
-            /* Make the first two boxes span the top row */
-            .preview-box:nth-child(1),
-            .preview-box:nth-child(2) {
-                grid-column: span 1;
-            }
-
-            /* Additional boxes will go to second row */
-            .preview-box:nth-child(n+3) {
-                grid-column: span 2;
-                /* Or span 1 for 2 columns in second row */
+        @media (max-width: 767px) {
+            .preview-container {
+                gap: 20px;
             }
         }
 
@@ -408,9 +405,25 @@
             box-shadow: var(--shadow);
             transition: var(--transition);
             min-width: 0;
+            display: flex;
+            flex-direction: column;
         }
 
-        /* Rest of your styles remain the same */
+        .preview-box:hover {
+            transform: translateY(-5px);
+            cursor: pointer;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .preview-box h3 {
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            color: var(--dark-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
         .preview-box h3 i {
             color: var(--primary-color);
         }
@@ -427,6 +440,7 @@
             overflow: hidden;
             position: relative;
             border: 2px dashed #e0e0e0;
+            flex-grow: 1;
         }
 
         .image-preview img {
@@ -439,19 +453,101 @@
         .image-preview .placeholder {
             color: var(--gray-color);
             font-size: 1.1rem;
+            text-align: center;
+            padding: 20px;
         }
 
+        /* Size info inside preview boxes */
         .size-info {
             display: flex;
             justify-content: space-between;
-            margin-top: 10px;
+            margin-top: 15px;
             color: var(--gray-color);
             font-size: 0.9rem;
+            background: rgba(67, 97, 238, 0.05);
+            padding: 10px 15px;
+            border-radius: 8px;
+            border-left: 3px solid var(--primary-color);
+        }
+
+        .size-info span {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .size-info strong {
+            color: var(--dark-color);
+            font-weight: 600;
+        }
+
+        /* Dimension Row */
+        .dimension-row {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        @media (min-width: 768px) {
+            .dimension-row {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 767px) {
+            .dimension-row {
+                grid-template-columns: repeat(1, 1fr);
+                gap: 15px;
+            }
+        }
+
+        .dimension-box {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            min-width: 0;
+            text-align: center;
+            border-top: 4px solid var(--primary-color);
+        }
+
+        .dimension-box:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .dimension-box h4 {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            color: var(--dark-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .dimension-box h4 i {
+            color: var(--primary-color);
+        }
+
+        .dimension-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+
+        .dimension-label {
+            color: var(--gray-color);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         /* Controls */
         .controls {
-            flex: 1;
             background: white;
             border-radius: 15px;
             padding: 30px;
@@ -798,10 +894,6 @@
                 width: 250px;
             }
 
-            .main-content-row {
-                flex-direction: column;
-            }
-
             .preview-container {
                 grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             }
@@ -930,10 +1022,6 @@
                 font-size: 1.1rem;
             }
 
-            .preview-container {
-                grid-template-columns: 1fr;
-            }
-
             .controls {
                 padding: 20px;
             }
@@ -944,6 +1032,18 @@
 
             .image-preview {
                 height: 250px;
+            }
+
+            .preview-box {
+                padding: 20px;
+            }
+
+            .dimension-box {
+                padding: 20px;
+            }
+
+            .dimension-value {
+                font-size: 1.7rem;
             }
         }
 
@@ -983,13 +1083,27 @@
             .logo h1 {
                 font-size: 22px;
             }
-
-            .main-content-row {
-                gap: 20px;
-            }
         }
 
-        @media (max-width: 400px) {
+        @media (max-width: 480px) {
+            .preview-container {
+                gap: 15px;
+            }
+
+            .preview-box {
+                padding: 15px;
+            }
+
+            .image-preview {
+                height: 200px;
+                margin-bottom: 15px;
+            }
+
+            .size-info {
+                flex-direction: column;
+                gap: 8px;
+            }
+
             .tool-header h1 {
                 font-size: 1.6rem;
             }
@@ -1004,6 +1118,17 @@
 
             .image-preview {
                 height: 200px;
+            }
+        }
+
+        /* Tablet specific adjustments */
+        @media (max-width: 992px) and (min-width: 768px) {
+            .preview-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .dimension-row {
+                grid-template-columns: repeat(2, 1fr);
             }
         }
     </style>
@@ -1097,32 +1222,84 @@
 
             <!-- Main Content Row (Shows after upload) -->
             <div class="main-content-row" id="mainContentRow" style="display: none;">
-                <!-- Preview Container -->
+                <!-- Preview Container with 3 boxes -->
                 <div class="preview-container">
                     <!-- Original Image Preview -->
-                    <div class="preview-box">
+                    <div class="preview-box" id="originalPreviewBox">
                         <h3><i class="fas fa-image"></i> Original Image</h3>
                         <div class="image-preview" id="originalPreview">
                             <div class="placeholder">No image selected</div>
                             <img id="originalImage" src="" alt="Original">
                         </div>
                         <div class="size-info">
-                            <span>Size: <span id="originalSize">0 KB</span></span>
-                            <span>Dimensions: <span id="originalDimensions">0 x 0 px</span></span>
+                            <span>
+                                <strong>Size:</strong>
+                                <span id="originalSize">0 KB</span>
+                            </span>
+                            <span>
+                                <strong>Dimensions:</strong>
+                                <span id="originalDimensions">0 x 0 px</span>
+                            </span>
                         </div>
                     </div>
 
                     <!-- Resized Image Preview -->
-                    <div class="preview-box">
+                    <div class="preview-box" id="resizedPreviewBox">
                         <h3><i class="fas fa-expand-alt"></i> Resized Image</h3>
                         <div class="image-preview" id="resizedPreview">
                             <div class="placeholder">Preview will appear here</div>
                             <img id="resizedImage" src="" alt="Resized">
                         </div>
                         <div class="size-info">
-                            <span>Size: <span id="resizedSize">0 KB</span></span>
-                            <span>Dimensions: <span id="resizedDimensions">0 x 0 px</span></span>
+                            <span>
+                                <strong>Size:</strong>
+                                <span id="resizedSize">0 KB</span>
+                            </span>
+                            <span>
+                                <strong>Dimensions:</strong>
+                                <span id="resizedDimensions">0 x 0 px</span>
+                            </span>
                         </div>
+                    </div>
+
+                    <!-- Comparison Preview -->
+                    <div class="preview-box" id="comparisonPreviewBox">
+                        <h3><i class="fas fa-exchange-alt"></i> Comparison</h3>
+                        <div class="image-preview" id="comparisonPreview">
+                            <div class="placeholder">Upload and resize to see comparison</div>
+                            <canvas id="comparisonCanvas" style="display: none;"></canvas>
+                        </div>
+                        <div class="size-info">
+                            <span>
+                                <strong>Size Reduction:</strong>
+                                <span id="sizeReduction">0%</span>
+                            </span>
+                            <span>
+                                <strong>Quality:</strong>
+                                <span id="qualityIndicator">N/A</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dimension Row (below preview boxes) -->
+                <div class="dimension-row">
+                    <div class="dimension-box">
+                        <h4><i class="fas fa-ruler-horizontal"></i> Width</h4>
+                        <div class="dimension-value" id="dimensionWidth">0</div>
+                        <div class="dimension-label">Pixels</div>
+                    </div>
+
+                    <div class="dimension-box">
+                        <h4><i class="fas fa-ruler-vertical"></i> Height</h4>
+                        <div class="dimension-value" id="dimensionHeight">0</div>
+                        <div class="dimension-label">Pixels</div>
+                    </div>
+
+                    <div class="dimension-box">
+                        <h4><i class="fas fa-percentage"></i> Scale</h4>
+                        <div class="dimension-value" id="dimensionScale">0%</div>
+                        <div class="dimension-label">Original Size</div>
                     </div>
                 </div>
 
@@ -1365,6 +1542,13 @@
         const processingOverlay = document.getElementById('processingOverlay');
         const mainContentRow = document.getElementById('mainContentRow');
 
+        // New elements for dimension row
+        const dimensionWidth = document.getElementById('dimensionWidth');
+        const dimensionHeight = document.getElementById('dimensionHeight');
+        const dimensionScale = document.getElementById('dimensionScale');
+        const sizeReduction = document.getElementById('sizeReduction');
+        const qualityIndicator = document.getElementById('qualityIndicator');
+
         // State variables
         let originalFile = null;
         let originalWidth = 0;
@@ -1526,6 +1710,9 @@
                     heightInput.value = originalHeight;
                     percentageInput.value = 100;
 
+                    // Update dimension boxes
+                    updateDimensionBoxes(originalWidth, originalHeight, originalWidth, originalHeight, file.size, file.size);
+
                     // Clear resized preview
                     resizedImage.src = '';
                     resizedImage.style.display = 'none';
@@ -1533,6 +1720,10 @@
                     resizedSize.textContent = '0 KB';
                     resizedDimensions.textContent = '0 x 0 px';
                     downloadBtn.disabled = true;
+
+                    // Clear comparison preview
+                    sizeReduction.textContent = '0%';
+                    qualityIndicator.textContent = 'N/A';
 
                     // Update file dimensions
                     fileDimensions.textContent = `${originalWidth} x ${originalHeight} px`;
@@ -1548,6 +1739,34 @@
             const sizes = ['Bytes', 'KB', 'MB', 'GB'];
             const i = Math.floor(Math.log(bytes) / Math.log(k));
             return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+        }
+
+        // Update function for dimension boxes
+        function updateDimensionBoxes(width, height, originalWidth, originalHeight, originalSize, newSize) {
+            dimensionWidth.textContent = width;
+            dimensionHeight.textContent = height;
+
+            if (originalWidth > 0) {
+                const scale = Math.round((width / originalWidth) * 100);
+                dimensionScale.textContent = scale + '%';
+            }
+
+            if (originalSize > 0 && newSize > 0) {
+                const reduction = Math.round(((originalSize - newSize) / originalSize) * 100);
+                sizeReduction.textContent = reduction + '%';
+
+                // Quality indicator logic
+                if (reduction > 70) {
+                    qualityIndicator.textContent = 'Low';
+                    qualityIndicator.style.color = '#ff6b6b';
+                } else if (reduction > 30) {
+                    qualityIndicator.textContent = 'Medium';
+                    qualityIndicator.style.color = '#ffa726';
+                } else {
+                    qualityIndicator.textContent = 'High';
+                    qualityIndicator.style.color = '#4bb543';
+                }
+            }
         }
 
         // Dimension input handling
@@ -1716,6 +1935,9 @@
                         resizedSize.textContent = formatFileSize(result.size);
                         resizedDimensions.textContent = `${width} x ${height} px`;
 
+                        // Update dimension boxes
+                        updateDimensionBoxes(width, height, originalWidth, originalHeight, originalFile.size, result.size);
+
                         // Store resized data for download
                         resizedCanvas = document.createElement('canvas');
                         resizedCanvas.width = width;
@@ -1791,6 +2013,14 @@
                 resizedPreview.querySelector('.placeholder').style.display = 'block';
                 resizedSize.textContent = '0 KB';
                 resizedDimensions.textContent = '0 x 0 px';
+
+                // Reset dimension boxes
+                dimensionWidth.textContent = '0';
+                dimensionHeight.textContent = '0';
+                dimensionScale.textContent = '0%';
+                sizeReduction.textContent = '0%';
+                qualityIndicator.textContent = 'N/A';
+                qualityIndicator.style.color = '';
 
                 // Reset file info
                 fileInfo.classList.remove('active');
