@@ -1175,10 +1175,19 @@
                 toolCard.addEventListener('click', () => {
                     if (tool.title === 'Image Resizer') {
                         window.location.href = 'imageresize.html';
-                    } if(tool.title === 'PDF Compressor'){
+                    } else if(tool.title === 'PDF Compressor'){
                         window.location.href = 'pdfcompresor.html';
                     }
-                     else {
+                    else if(tool.title === 'SEO Analyzer'){
+                        window.location.href = 'seoanalyzer.html';
+                    }else if(tool.title === 'PDF to Word'){
+                        window.location.href = 'pdftoword.html';
+                    } else if(tool.title === 'Image Converter'){
+                        window.location.href = 'imageconverter.html';
+                    }
+                    
+                    
+                    else {
                         alert(`Opening ${tool.title} tool...`);
                     }
                 });
