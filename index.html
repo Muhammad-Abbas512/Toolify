@@ -1175,7 +1175,10 @@
                 toolCard.addEventListener('click', () => {
                     if (tool.title === 'Image Resizer') {
                         window.location.href = 'imageresize.html';
-                    } else {
+                    } if(tool.title === 'PDF Compressor'){
+                        window.location.href = 'pdfcompresor.html';
+                    }
+                     else {
                         alert(`Opening ${tool.title} tool...`);
                     }
                 });
