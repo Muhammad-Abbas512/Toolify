@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Toolify | Your Data Protection</title>
+    <meta name="description"
+        content="Toolify's Privacy Policy. Learn how we collect, use, and protect your personal information. Your privacy is our priority.">
+    <meta name="keywords"
+        content="privacy policy, data protection, online privacy, toolify privacy, GDPR compliant, data security">
+    <meta name="author" content="Toolify">
+    <link rel="canonical" href="https://www.toolify.com/privacy-policy.html">
+    <link rel="shortcut icon" href="images/image-removebg-preview.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #4361ee;
+            --secondary-color: #3f37c9;
+            --accent-color: #4cc9f0;
+            --dark-color: #1a1a2e;
+            --light-color: #f8f9fa;
+            --gray-color: #6c757d;
+            --gradient-bg: linear-gradient(135deg, #4361ee, #3f37c9, #4cc9f0);
+            --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f5f7ff;
+            color: #333;
+            line-height: 1.6;
+            padding-top: 80px;
+        }
+
+        /* Top Navigation - Same as main page */
+        .top-nav {
+            background: white;
+            box-shadow: var(--shadow);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            height: 80px;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo h1 {
+            font-size: 28px;
+            background: var(--gradient-bg);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-weight: 800;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nav-menu ul {
+            display: flex;
+            list-style: none;
+            gap: 5px;
+        }
+
+        .nav-menu li {
+            position: relative;
+        }
+
+        .nav-menu a {
+            display: flex;
+            align-items: center;
+            padding: 15px 20px;
+            color: #333;
+            text-decoration: none;
+            transition: var(--transition);
+            border-radius: 5px;
+            font-weight: 500;
+        }
+
+        .nav-menu a:hover,
+        .nav-menu a.active {
+            background: rgba(67, 97, 238, 0.1);
+            color: var(--primary-color);
+        }
+
+        .nav-menu i {
+            margin-right: 8px;
+            width: 18px;
+            text-align: center;
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            min-width: 220px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            border-radius: 10px;
+            overflow: hidden;
+            z-index: 1001;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-left: 20px;
+        }
+
+        .search-container {
+            position: relative;
+        }
+
+        .search-box {
+            padding: 10px 20px;
+            padding-right: 50px;
+            border: 2px solid #e0e0e0;
+            border-radius: 50px;
+            font-size: 14px;
+            width: 250px;
+            transition: var(--transition);
+        }
+
+        .search-box:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            width: 300px;
+        }
+
+        .search-button {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: var(--gray-color);
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .theme-toggle {
+            background: none;
+            border: none;
+            font-size: 20px;
+            color: var(--gray-color);
+            cursor: pointer;
+            transition: var(--transition);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: var(--dark-color);
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        /* Main Content */
+        .legal-header {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #4361ee, #3f37c9);
+            color: white;
+            border-radius: 0 0 30px 30px;
+            margin-bottom: 40px;
+        }
+
+        .legal-header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .legal-header p {
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0.95;
+        }
+
+        /* Legal Content */
+        .legal-container {
+            max-width: 1200px;
+            margin: 0 auto 60px;
+            padding: 0 30px;
+        }
+
+        .legal-content {
+            background: white;
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            line-height: 1.8;
+        }
+
+        .legal-section {
+            margin-bottom: 40px;
+        }
+
+        .legal-section h2 {
+            color: var(--primary-color);
+            font-size: 2rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid var(--primary-color);
+        }
+
+        .legal-section h3 {
+            color: var(--dark-color);
+            font-size: 1.5rem;
+            margin: 25px 0 15px;
+        }
+
+        .legal-section p {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .legal-section ul,
+        .legal-section ol {
+            margin: 15px 0 15px 40px;
+        }
+
+        .legal-section li {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .last-updated {
+            background: rgba(67, 97, 238, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 40px;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .contact-info {
+            margin-top: 30px;
+            padding: 20px;
+            background: #f8f9ff;
+            border-radius: 10px;
+        }
+
+        /* Footer - Same as main page */
+        .footer {
+            background: var(--dark-color);
+            color: white;
+            padding: 60px 30px 30px;
+            margin-top: auto;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h3 {
+            font-size: 1.5rem;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-section h3:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--accent-color);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: #ddd;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-color);
+            padding-left: 5px;
+        }
+
+        .newsletter-form {
+            display: flex;
+            margin-top: 20px;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 12px 15px;
+            border: none;
+            border-radius: 5px 0 0 5px;
+        }
+
+        .newsletter-form button {
+            background: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .newsletter-form button:hover {
+            background: #3aa8d0;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .social-icons a:hover {
+            background: var(--accent-color);
+            transform: translateY(-3px);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .mobile-menu-toggle {
+                display: block;
+            }
+
+            .nav-menu {
+                position: fixed;
+                top: 80px;
+                left: 0;
+                right: 0;
+                background: white;
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+                transform: translateY(-100%);
+                opacity: 0;
+                visibility: hidden;
+                transition: var(--transition);
+                z-index: 999;
+                height: auto;
+                max-height: calc(100vh - 80px);
+                overflow-y: auto;
+            }
+
+            .nav-menu.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+
+            .nav-menu ul {
+                flex-direction: column;
+                width: 100%;
+                gap: 5px;
+            }
+
+            .nav-menu li {
+                width: 100%;
+            }
+
+            .nav-menu a {
+                padding: 15px;
+                width: 100%;
+                border-radius: 5px;
+                justify-content: flex-start;
+                font-size: 16px;
+            }
+
+            .nav-actions {
+                margin-left: 0;
+                margin-top: 15px;
+                width: 100%;
+            }
+
+            .search-container {
+                width: 100%;
+            }
+
+            .search-box {
+                width: 100%;
+            }
+
+            .search-box:focus {
+                width: 100%;
+            }
+
+            .legal-header h1 {
+                font-size: 2.8rem;
+            }
+
+            .legal-content {
+                padding: 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding-top: 70px;
+            }
+
+            .top-nav {
+                height: 70px;
+            }
+
+            .nav-menu {
+                top: 70px;
+                max-height: calc(100vh - 70px);
+            }
+
+            .legal-header {
+                padding: 40px 20px;
+            }
+
+            .legal-header h1 {
+                font-size: 2.3rem;
+            }
+
+            .legal-header p {
+                font-size: 1.1rem;
+            }
+
+            .legal-container {
+                padding: 0 20px;
+            }
+
+            .legal-content {
+                padding: 25px;
+            }
+
+            .legal-section h2 {
+                font-size: 1.7rem;
+            }
+
+            .legal-section h3 {
+                font-size: 1.3rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .legal-header h1 {
+                font-size: 1.9rem;
+            }
+
+            .legal-content {
+                padding: 20px;
+            }
+
+            .legal-section h2 {
+                font-size: 1.5rem;
+            }
+
+            .legal-section p,
+            .legal-section li {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Top Navigation -->
+    <nav class="top-nav">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html" style="text-decoration: none;">
+                    <h1><i class="fas fa-tools"></i> Tool<span>ify</span></h1>
+                </a>
+            </div>
+
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <div class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li class="dropdown" id="pdfDropdown">
+                        <a href="#"><i class="fas fa-file-pdf"></i> PDF Tools <i class="fas fa-chevron-down"></i></a>
+
+                    </li>
+                    <li class="dropdown" id="seoDropdown">
+                        <a href="#"><i class="fas fa-search"></i> SEO Tools <i class="fas fa-chevron-down"></i></a>
+
+                    </li>
+                    <li><a href="about.html"><i class="fas fa-photo"></i>About</a></li>
+                    <li><a href="contact.html"><i class="fas fa-phone"></i>Contact</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <div class="search-container">
+                        <input type="text" class="search-box" placeholder="Search tools...">
+                        <button class="search-button">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Legal Header -->
+    <header class="legal-header">
+        <div class="legal-container">
+            <h1>Privacy Policy</h1>
+            <p>Your privacy is important to us. This policy explains how we collect, use, and protect your information.
+            </p>
+        </div>
+    </header>
+
+    <!-- Legal Content -->
+    <main class="legal-container">
+        <article class="legal-content">
+            <div class="legal-section">
+                <h2>1. Introduction</h2>
+                <p>Welcome to Toolify ("we," "our," or "us"). We are committed to protecting your personal information
+                    and your right to privacy. If you have any questions or concerns about this privacy notice or our
+                    practices with regard to your personal information, please contact us at privacy@toolify.com.</p>
+
+                <p>This Privacy Policy applies to all information collected through our website
+                    (https://www.toolify.com), and/or any related services, sales, marketing, or events (we refer to
+                    them collectively in this Privacy Policy as the "Services").</p>
+            </div>
+
+            <div class="legal-section">
+                <h2>2. Information We Collect</h2>
+                <h3>Personal Information You Disclose to Us</h3>
+                <p><strong>In Short:</strong> We collect personal information that you provide to us.</p>
+
+                <p>We collect personal information that you voluntarily provide to us when you register on the Services,
+                    express an interest in obtaining information about us or our products and Services, when you
+                    participate in activities on the Services, or otherwise when you contact us.</p>
+
+                <p>The personal information that we collect depends on the context of your interactions with us and the
+                    Services, the choices you make, and the products and features you use. The personal information we
+                    collect may include the following:</p>
+
+                <ul>
+                    <li><strong>Personal Information Provided by You:</strong> We collect names; phone numbers; email
+                        addresses; mailing addresses; usernames; passwords; contact preferences; contact or
+                        authentication data; billing addresses; and other similar information.</li>
+                    <li><strong>Payment Data:</strong> We may collect data necessary to process your payment if you make
+                        purchases, such as your payment instrument number (such as a credit card number), and the
+                        security code associated with your payment instrument. All payment data is stored by our payment
+                        processor and you should review its privacy policies and contact the payment processor directly
+                        to respond to your questions.</li>
+                </ul>
+
+                <h3>Information Automatically Collected</h3>
+                <p><strong>In Short:</strong> Some information — such as your Internet Protocol (IP) address and/or
+                    browser and device characteristics — is collected automatically when you visit our Services.</p>
+
+                <p>We automatically collect certain information when you visit, use, or navigate the Services. This
+                    information does not reveal your specific identity (like your name or contact information) but may
+                    include device and usage information, such as your IP address, browser and device characteristics,
+                    operating system, language preferences, referring URLs, device name, country, location, information
+                    about how and when you use our Services, and other technical information. This information is
+                    primarily needed to maintain the security and operation of our Services, and for our internal
+                    analytics and reporting purposes.</p>
+            </div>
+
+            <div class="legal-section">
+                <h2>3. How We Use Your Information</h2>
+                <p><strong>In Short:</strong> We process your information for purposes based on legitimate business
+                    interests, the fulfillment of our contract with you, compliance with our legal obligations, and/or
+                    your consent.</p>
+
+                <p>We use personal information collected via our Services for a variety of business purposes described
+                    below. We process your personal information for these purposes in reliance on our legitimate
+                    business interests, in order to enter into or perform a contract with you, with your consent, and/or
+                    for compliance with our legal obligations. We indicate the specific processing grounds we rely on
+                    next to each purpose listed below.</p>
+
+                <p>We use the information we collect or receive:</p>
+
+                <ul>
+                    <li><strong>To facilitate account creation and logon process.</strong> If you choose to link your
+                        account with us to a third-party account (such as your Google or Facebook account), we use the
+                        information you allowed us to collect from those third parties to facilitate account creation
+                        and logon process for the performance of the contract.</li>
+                    <li><strong>To post testimonials.</strong> We post testimonials on our Services that may contain
+                        personal information. Prior to posting a testimonial, we will obtain your consent to use your
+                        name and the content of the testimonial. If you wish to update, or delete your testimonial,
+                        please contact us at privacy@toolify.com and be sure to include your name, testimonial location,
+                        and contact information.</li>
+                    <li><strong>Request feedback.</strong> We may use your information to request feedback and to
+                        contact you about your use of our Services.</li>
+                    <li><strong>To enable user-to-user communications.</strong> We may use your information in order to
+                        enable user-to-user communications with each user's consent.</li>
+                    <li><strong>To manage user accounts.</strong> We may use your information for the purposes of
+                        managing our account and keeping it in working order.</li>
+                    <li><strong>To send administrative information to you.</strong> We may use your personal information
+                        to send you product, service, and new feature information and/or information about changes to
+                        our terms, conditions, and policies.</li>
+                    <li><strong>To protect our Services.</strong> We may use your information as part of our efforts to
+                        keep our Services safe and secure (for example, for fraud monitoring and prevention).</li>
+                    <li><strong>To enforce our terms, conditions, and policies for business purposes, to comply with
+                            legal and regulatory requirements or in connection with our contract.</strong></li>
+                    <li><strong>To respond to legal requests and prevent harm.</strong> If we receive a subpoena or
+                        other legal request, we may need to inspect the data we hold to determine how to respond.</li>
+                </ul>
+            </div>
+
+            <div class="legal-section">
+                <h2>4. Information Sharing and Disclosure</h2>
+                <p><strong>In Short:</strong> We only share information with your consent, to comply with laws, to
+                    provide you with services, to protect your rights, or to fulfill business obligations.</p>
+
+                <p>We may process or share your data that we hold based on the following legal basis:</p>
+
+                <ul>
+                    <li><strong>Consent:</strong> We may process your data if you have given us specific consent to use
+                        your personal information for a specific purpose.</li>
+                    <li><strong>Legitimate Interests:</strong> We may process your data when it is reasonably necessary
+                        to achieve our legitimate business interests.</li>
+                    <li><strong>Performance of a Contract:</strong> Where we have entered into a contract with you, we
+                        may process your personal information to fulfill the terms of our contract.</li>
+                    <li><strong>Legal Obligations:</strong> We may disclose your information where we are legally
+                        required to do so in order to comply with applicable law, governmental requests, a judicial
+                        proceeding, court order, or legal process, such as in response to a court order or a subpoena
+                        (including in response to public authorities to meet national security or law enforcement
+                        requirements).</li>
+                    <li><strong>Vital Interests:</strong> We may disclose your information where we believe it is
+                        necessary to investigate, prevent, or take action regarding potential violations of our
+                        policies, suspected fraud, situations involving potential threats to the safety of any person
+                        and illegal activities, or as evidence in litigation in which we are involved.</li>
+                </ul>
+            </div>
+
+            <div class="legal-section">
+                <h2>5. Data Security</h2>
+                <p>We have implemented appropriate technical and organizational security measures designed to protect
+                    the security of any personal information we process. However, despite our safeguards and efforts to
+                    secure your information, no electronic transmission over the Internet or information storage
+                    technology can be guaranteed to be 100% secure, so we cannot promise or guarantee that hackers,
+                    cybercriminals, or other unauthorized third parties will not be able to defeat our security and
+                    improperly collect, access, steal, or modify your information. Although we will do our best to
+                    protect your personal information, transmission of personal information to and from our Services is
+                    at your own risk. You should only access the Services within a secure environment.</p>
+            </div>
+
+            <div class="legal-section">
+                <h2>6. Your Privacy Rights</h2>
+                <p>In some regions (like the European Economic Area, United Kingdom, and California), you have certain
+                    rights under applicable data protection laws. These may include the right (i) to request access and
+                    obtain a copy of your personal information, (ii) to request rectification or erasure; (iii) to
+                    restrict the processing of your personal information; (iv) if applicable, to data portability; and
+                    (v) not to be subject to automated decision-making. In certain circumstances, you may also have the
+                    right to object to the processing of your personal information.</p>
+
+                <p>To make such a request, please use the contact details provided below. We will consider and act upon
+                    any request in accordance with applicable data protection laws.</p>
+            </div>
+
+            <div class="legal-section">
+                <h2>7. Changes to This Privacy Policy</h2>
+                <p>We may update this Privacy Policy from time to time. The updated version will be indicated by an
+                    updated "Revised" date and the updated version will be effective as soon as it is accessible. If we
+                    make material changes to this Privacy Policy, we may notify you either by prominently posting a
+                    notice of such changes or by directly sending you a notification. We encourage you to review this
+                    Privacy Policy frequently to be informed of how we are protecting your information.</p>
+            </div>
+
+            <div class="legal-section">
+                <h2>8. Contact Us</h2>
+                <p>If you have questions or comments about this policy, you may contact our Data Protection Officer
+                    (DPO) by email at privacy@toolify.com, by phone at +1 (555) 123-4567, or by post to:</p>
+
+                <div class="contact-info">
+                    <p><strong>Toolify Data Protection Officer</strong></p>
+                    <p>123 Tech Street, Suite 456</p>
+                    <p>San Francisco, CA 94107</p>
+                    <p>United States</p>
+                </div>
+            </div>
+
+            <div class="last-updated">
+                <p><strong>Last Updated:</strong> December 2023</p>
+                <p><strong>Effective Date:</strong> January 1, 2023</p>
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3><i class="fas fa-tools"></i> Toolify</h3>
+                <p>Your all-in-one solution for online tools. Free, fast, and secure utilities for PDF, images, SEO, and
+                    more.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">PDF Tools</a></li>
+                    <li><a href="#">Image Tools</a></li>
+                    <li><a href="#">SEO Tools</a></li>
+                    <li><a href="#">Video Tools</a></li>
+                    <li><a href="#">Developer Tools</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul class="footer-links">
+                    <li><a href="privacy-policy.html" class="active">Privacy Policy</a></li>
+                    <li><a href="terms-of-service.html">Terms of Service</a></li>
+                    <li><a href="cookie-policy.html">Cookie Policy</a></li>
+                    <li><a href="disclaimer.html">Disclaimer</a></li>
+                    <li><a href="gdpr-compliance.html">GDPR Compliance</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <p>Subscribe to get updates on new tools and features.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Toolify. All rights reserved. | Designed with <i class="fas fa-heart"
+                    style="color: #ff4757;"></i> for the digital community</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu functionality
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const navMenu = document.getElementById('navMenu');
+        const themeToggle = document.getElementById('themeToggle');
+
+        mobileMenuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+
+            const menuIcon = mobileMenuToggle.querySelector('i');
+            if (navMenu.classList.contains('active')) {
+                menuIcon.className = 'fas fa-times';
+            } else {
+                menuIcon.className = 'fas fa-bars';
+            }
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!navMenu.contains(e.target) &&
+                !mobileMenuToggle.contains(e.target) &&
+                navMenu.classList.contains('active')) {
+                navMenu.classList.remove('active');
+                mobileMenuToggle.querySelector('i').className = 'fas fa-bars';
+            }
+        });
+
+        // Close menu when clicking on a link
+        const navLinks = navMenu.querySelectorAll('a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 992) {
+                    navMenu.classList.remove('active');
+                    mobileMenuToggle.querySelector('i').className = 'fas fa-bars';
+                }
+            });
+        });
+
+
+
+
+
+        // Add active class to current page in nav
+        const currentPage = window.location.pathname.split('/').pop();
+        navLinks.forEach(link => {
+            const linkPage = link.getAttribute('href');
+            if (linkPage === currentPage ||
+                (currentPage === '' && linkPage === 'index.html')) {
+                link.classList.add('active');
+            }
+        });
+
+        // Handle window resize
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 992) {
+                navMenu.classList.remove('active');
+                mobileMenuToggle.querySelector('i').className = 'fas fa-bars';
+            }
+        });
+    </script>
+</body>
+
+</html>
