@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://toolifi.vercel.app/</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://toolifi.vercel.app/index.html</loc>
+    <priority>0.90</priority>
+  </url>
+
+  <url>
+    <loc>https://toolifi.vercel.app/about.html</loc>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://toolifi.vercel.app/contact.html</loc>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://toolifi.vercel.app/privacy-policy.html</loc>
+    <priority>0.70</priority>
+  </url>
+
+  <url>
+    <loc>https://toolifi.vercel.app/terms-of-service.html</loc>
+    <priority>0.70</priority>
+  </url>
+
+  <url>
+    <loc>https://toolifi.vercel.app/cookie-policy.html</loc>
+    <priority>0.70</priority>
+  </url>
+
+  <url>
+    <loc>https://toolifi.vercel.app/Disclaimer.html</loc>
+    <priority>0.60</priority>
+  </url>
+
+  <url>
+    <loc>https://toolifi.vercel.app/gdpr-compliance.html</loc>
+    <priority>0.60</priority>
+  </url>
+
+</urlset>
