@@ -1,0 +1,9 @@
+https://toolifi.vercel.app/
+https://toolifi.vercel.app/index.html
+https://toolifi.vercel.app/about.html
+https://toolifi.vercel.app/contact.html
+https://toolifi.vercel.app/privacy-policy.html
+https://toolifi.vercel.app/terms-of-service.html
+https://toolifi.vercel.app/cookie-policy.html
+https://toolifi.vercel.app/Disclaimer.html
+https://toolifi.vercel.app/gdpr-compliance.html

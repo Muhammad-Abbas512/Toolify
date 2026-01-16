@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:ror="http://rorweb.com/0.1/" >
+<channel>
+  <title>ROR Sitemap for https://toolifi.vercel.app/</title>
+  <link>https://toolifi.vercel.app/</link>
+
+<item>
+     <link>https://toolifi.vercel.app/</link>
+     <title>Toolify - Free Online Tools for PDF, Images, SEO &amp; More</title>
+     <description>Toolify offers free online tools for PDF editing, image processing, SEO optimization, and more. Simplify your workflow with our user-friendly tools.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>0</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://toolifi.vercel.app/index.html</link>
+     <title>Toolify - Free Online Tools for PDF, Images, SEO &amp; More</title>
+     <description>Toolify offers free online tools for PDF editing, image processing, SEO optimization, and more. Simplify your workflow with our user-friendly tools.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://toolifi.vercel.app/about.html</link>
+     <title>About Toolify - Our Story, Mission &amp; Team | Free Online Tools Platform</title>
+     <description>Learn about Toolify - our mission to provide free, powerful online tools for everyone. Discover our story, team, and commitment to making digital tasks easier.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://toolifi.vercel.app/contact.html</link>
+     <title>Contact Toolify - Get in Touch, Support &amp; Feedback | Free Online Tools</title>
+     <description>Contact Toolify for support, feedback, or partnership inquiries. Our team is here to help you get the most out of our free online tools platform.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://toolifi.vercel.app/privacy-policy.html</link>
+     <title>Privacy Policy - Toolify | Your Data Protection</title>
+     <description>Toolify's Privacy Policy. Learn how we collect, use, and protect your personal information. Your privacy is our priority.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://toolifi.vercel.app/terms-of-service.html</link>
+     <title>Terms of Service - Toolify | User Agreement &amp; Legal Terms</title>
+     <description>Read Toolify's Terms of Service. Our user agreement outlines the terms, conditions, and legal obligations for using our online tools and services.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://toolifi.vercel.app/cookie-policy.html</link>
+     <title>Cookie Policy - Toolify | How We Use Cookies &amp; Tracking Technologies</title>
+     <description>Toolify Cookie Policy. Learn about how we use cookies, web beacons, and similar technologies to enhance your browsing experience and improve our services.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://toolifi.vercel.app/Disclaimer.html</link>
+     <title>Disclaimer - Toolify | Important Legal Information &amp; Liability Disclaimers</title>
+     <description>Toolify Disclaimer. Read important legal information about the limitations, liabilities, and conditions of using our online tools and services.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://toolifi.vercel.app/gdpr-compliance.html</link>
+     <title>GDPR Compliance - Toolify | General Data Protection Regulation Compliance Statement</title>
+     <description>Toolify GDPR Compliance Statement. Learn how we comply with the General Data Protection Regulation (GDPR) for our European Union users and data protection standards.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+</channel>
+</rss>
+  
